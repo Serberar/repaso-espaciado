@@ -1,0 +1,395 @@
+{
+  "subject": "SQL y bases de datos",
+  "questions": [
+    {
+      "id": 1,
+      "unit": "Consultas",
+      "question": "¿Qué cláusula filtra después de agrupar?",
+      "options": [
+        "LIMIT",
+        "WHERE",
+        "ORDER BY",
+        "HAVING"
+      ],
+      "correct": "HAVING",
+      "explicacion": "WHERE filtra filas antes de agrupar."
+    },
+    {
+      "id": 2,
+      "unit": "Consultas",
+      "question": "¿Qué devuelve un LEFT JOIN sin coincidencia?",
+      "options": [
+        "La fila izquierda con nulos a la derecha",
+        "Un error",
+        "Nada",
+        "La fila duplicada"
+      ],
+      "correct": "La fila izquierda con nulos a la derecha",
+      "explicacion": "Conserva todas las filas de la tabla izquierda."
+    },
+    {
+      "id": 3,
+      "unit": "Consultas",
+      "question": "¿Cómo se comprueba si un campo es nulo?",
+      "options": [
+        "campo IN (NULL)",
+        "campo = NULL",
+        "campo IS NULL",
+        "campo == NULL"
+      ],
+      "correct": "campo IS NULL",
+      "explicacion": "Comparar con NULL da desconocido, nunca verdadero."
+    },
+    {
+      "id": 4,
+      "unit": "Consultas",
+      "question": "¿Qué cuenta COUNT(columna)?",
+      "options": [
+        "Todas las filas",
+        "Las filas nulas",
+        "Las filas donde la columna no es nula",
+        "Los valores distintos"
+      ],
+      "correct": "Las filas donde la columna no es nula",
+      "explicacion": "COUNT(*) cuenta todas."
+    },
+    {
+      "id": 5,
+      "unit": "Consultas",
+      "question": "¿Qué diferencia a UNION ALL de UNION?",
+      "options": [
+        "Ordena el resultado",
+        "Solo admite dos tablas",
+        "No quita duplicados",
+        "Quita los nulos"
+      ],
+      "correct": "No quita duplicados",
+      "explicacion": "UNION elimina duplicados, con su coste."
+    },
+    {
+      "id": 6,
+      "unit": "Consultas",
+      "question": "¿Qué hace una función de ventana?",
+      "options": [
+        "Agrupa y reduce filas",
+        "Abre otra conexión",
+        "Calcula sobre un grupo sin juntar las filas",
+        "Crea una tabla"
+      ],
+      "correct": "Calcula sobre un grupo sin juntar las filas",
+      "explicacion": "ROW_NUMBER() OVER (...) es un ejemplo."
+    },
+    {
+      "id": 7,
+      "unit": "Consultas",
+      "question": "¿Para qué sirve WITH (CTE)?",
+      "options": [
+        "Dar nombre a una subconsulta",
+        "Bloquear filas",
+        "Crear un índice",
+        "Abrir una transacción"
+      ],
+      "correct": "Dar nombre a una subconsulta",
+      "explicacion": "También permite consultas recursivas."
+    },
+    {
+      "id": 8,
+      "unit": "Consultas",
+      "question": "¿Qué hace EXISTS?",
+      "options": [
+        "Devuelve la primera fila",
+        "Cuenta filas",
+        "Crea la tabla si falta",
+        "Comprueba si la subconsulta devuelve alguna fila"
+      ],
+      "correct": "Comprueba si la subconsulta devuelve alguna fila",
+      "explicacion": "Puede parar en cuanto encuentra una."
+    },
+    {
+      "id": 9,
+      "unit": "Consultas",
+      "question": "¿Qué devuelve COALESCE(a, b)?",
+      "options": [
+        "El primero que no es nulo",
+        "La suma",
+        "El mayor",
+        "El último"
+      ],
+      "correct": "El primero que no es nulo",
+      "explicacion": "Es habitual para dar un valor por defecto."
+    },
+    {
+      "id": 10,
+      "unit": "Consultas",
+      "question": "¿En qué orden lógico se evalúa SELECT?",
+      "options": [
+        "Después de WHERE y GROUP BY",
+        "Antes de FROM",
+        "Antes de WHERE",
+        "El primero"
+      ],
+      "correct": "Después de WHERE y GROUP BY",
+      "explicacion": "Por eso un alias no se puede usar en WHERE."
+    },
+    {
+      "id": 11,
+      "unit": "Diseño",
+      "question": "¿Qué garantiza una clave primaria?",
+      "options": [
+        "Que cada fila es única y no nula",
+        "Que no hay huecos",
+        "Que la tabla está ordenada",
+        "Que se borra en cascada"
+      ],
+      "correct": "Que cada fila es única y no nula",
+      "explicacion": "Solo puede haber una por tabla."
+    },
+    {
+      "id": 12,
+      "unit": "Diseño",
+      "question": "¿Qué asegura una clave foránea?",
+      "options": [
+        "Que no cambia",
+        "Que se cifra",
+        "Que el valor existe en la otra tabla",
+        "Que el valor es único"
+      ],
+      "correct": "Que el valor existe en la otra tabla",
+      "explicacion": "Mantiene la integridad referencial."
+    },
+    {
+      "id": 13,
+      "unit": "Diseño",
+      "question": "¿Qué evita la tercera forma normal?",
+      "options": [
+        "Los nulos",
+        "Las claves compuestas",
+        "Que un dato dependa de otro que no es clave",
+        "Los índices"
+      ],
+      "correct": "Que un dato dependa de otro que no es clave",
+      "explicacion": "Se eliminan las dependencias transitivas."
+    },
+    {
+      "id": 14,
+      "unit": "Diseño",
+      "question": "¿Cómo se modela una relación muchos a muchos?",
+      "options": [
+        "Con dos claves primarias",
+        "Duplicando filas",
+        "Con una tabla intermedia",
+        "Con una lista en una columna"
+      ],
+      "correct": "Con una tabla intermedia",
+      "explicacion": "La intermedia guarda las dos claves foráneas."
+    },
+    {
+      "id": 15,
+      "unit": "Diseño",
+      "question": "¿Qué tipo conviene para dinero?",
+      "options": [
+        "NUMERIC",
+        "REAL",
+        "TEXT",
+        "FLOAT"
+      ],
+      "correct": "NUMERIC",
+      "explicacion": "Los decimales binarios no representan 0,1 de forma exacta."
+    },
+    {
+      "id": 16,
+      "unit": "Diseño",
+      "question": "¿Qué hace ON DELETE CASCADE?",
+      "options": [
+        "Pone nulos",
+        "Impide borrar",
+        "Guarda una copia",
+        "Borra las filas que dependen"
+      ],
+      "correct": "Borra las filas que dependen",
+      "explicacion": "Con SET NULL quedarían a nulo."
+    },
+    {
+      "id": 17,
+      "unit": "Diseño",
+      "question": "¿Qué comprueba una restricción CHECK?",
+      "options": [
+        "Una condición sobre los valores",
+        "Que exista otra fila",
+        "El tamaño de la tabla",
+        "El tipo de conexión"
+      ],
+      "correct": "Una condición sobre los valores",
+      "explicacion": "Por ejemplo, que un precio no sea negativo."
+    },
+    {
+      "id": 18,
+      "unit": "Diseño",
+      "question": "¿Cuándo tiene sentido desnormalizar?",
+      "options": [
+        "Para validar datos",
+        "Para acelerar lecturas muy frecuentes",
+        "Para ahorrar espacio",
+        "Siempre"
+      ],
+      "correct": "Para acelerar lecturas muy frecuentes",
+      "explicacion": "A cambio hay que mantener las copias al día."
+    },
+    {
+      "id": 19,
+      "unit": "Rendimiento",
+      "question": "¿Qué coste tiene un índice?",
+      "options": [
+        "Escrituras más lentas y más espacio",
+        "Lecturas más lentas",
+        "Menos filas",
+        "Ninguno"
+      ],
+      "correct": "Escrituras más lentas y más espacio",
+      "explicacion": "Hay que actualizarlo en cada cambio."
+    },
+    {
+      "id": 20,
+      "unit": "Rendimiento",
+      "question": "¿Para qué sirve EXPLAIN ANALYZE?",
+      "options": [
+        "Ver el plan real y sus tiempos",
+        "Limpiar la tabla",
+        "Crear índices",
+        "Traducir la consulta"
+      ],
+      "correct": "Ver el plan real y sus tiempos",
+      "explicacion": "Ejecuta la consulta y mide cada paso."
+    },
+    {
+      "id": 21,
+      "unit": "Rendimiento",
+      "question": "¿Qué consulta aprovecha un índice en (a, b)?",
+      "options": [
+        "Ninguna",
+        "Ordenar por c",
+        "Filtrar solo por b",
+        "Filtrar por a"
+      ],
+      "correct": "Filtrar por a",
+      "explicacion": "El índice se usa empezando por la izquierda."
+    },
+    {
+      "id": 22,
+      "unit": "Rendimiento",
+      "question": "¿Qué es el problema N+1?",
+      "options": [
+        "Un índice de más",
+        "Una fila duplicada",
+        "Un bloqueo",
+        "Una consulta por cada fila de otra consulta"
+      ],
+      "correct": "Una consulta por cada fila de otra consulta",
+      "explicacion": "Se arregla con un JOIN o cargando en bloque."
+    },
+    {
+      "id": 23,
+      "unit": "Rendimiento",
+      "question": "¿Por qué LIKE '%texto' no usa un índice normal?",
+      "options": [
+        "Porque es lento siempre",
+        "Porque no conoce el principio",
+        "Porque falta un JOIN",
+        "Porque LIKE es texto"
+      ],
+      "correct": "Porque no conoce el principio",
+      "explicacion": "El índice ordena por el comienzo del valor."
+    },
+    {
+      "id": 24,
+      "unit": "Rendimiento",
+      "question": "¿Qué pagina mejor en tablas grandes?",
+      "options": [
+        "Traerlo todo",
+        "ORDER BY aleatorio",
+        "OFFSET alto",
+        "Filtrar por la última clave vista"
+      ],
+      "correct": "Filtrar por la última clave vista",
+      "explicacion": "OFFSET recorre y descarta todas las filas anteriores."
+    },
+    {
+      "id": 25,
+      "unit": "Transacciones",
+      "question": "¿Qué significa la A de ACID?",
+      "options": [
+        "Acceso",
+        "Autonomía",
+        "Alternancia",
+        "Atomicidad"
+      ],
+      "correct": "Atomicidad",
+      "explicacion": "O se hace todo o no se hace nada."
+    },
+    {
+      "id": 26,
+      "unit": "Transacciones",
+      "question": "¿Qué es una lectura sucia?",
+      "options": [
+        "Leer sin índice",
+        "Leer dos veces",
+        "Leer datos borrados",
+        "Leer datos aún no confirmados"
+      ],
+      "correct": "Leer datos aún no confirmados",
+      "explicacion": "PostgreSQL no la permite en ningún nivel."
+    },
+    {
+      "id": 27,
+      "unit": "Transacciones",
+      "question": "¿Qué hace ROLLBACK?",
+      "options": [
+        "Repite la consulta",
+        "Confirma los cambios",
+        "Cierra la conexión",
+        "Deshace la transacción"
+      ],
+      "correct": "Deshace la transacción",
+      "explicacion": "Confirmar es COMMIT."
+    },
+    {
+      "id": 28,
+      "unit": "Transacciones",
+      "question": "¿Qué bloquea SELECT ... FOR UPDATE?",
+      "options": [
+        "Las filas leídas",
+        "La conexión",
+        "El esquema",
+        "La base entera"
+      ],
+      "correct": "Las filas leídas",
+      "explicacion": "Otras transacciones esperan para modificarlas."
+    },
+    {
+      "id": 29,
+      "unit": "Transacciones",
+      "question": "¿Qué es un interbloqueo?",
+      "options": [
+        "Dos transacciones que se esperan entre sí",
+        "Una consulta lenta",
+        "Un índice roto",
+        "Una clave repetida"
+      ],
+      "correct": "Dos transacciones que se esperan entre sí",
+      "explicacion": "La base cancela una de las dos."
+    },
+    {
+      "id": 30,
+      "unit": "Transacciones",
+      "question": "¿Qué nivel evita las lecturas fantasma?",
+      "options": [
+        "READ UNCOMMITTED",
+        "READ COMMITTED",
+        "SERIALIZABLE",
+        "Ninguno"
+      ],
+      "correct": "SERIALIZABLE",
+      "explicacion": "Equivale a ejecutar las transacciones una tras otra."
+    }
+  ]
+}

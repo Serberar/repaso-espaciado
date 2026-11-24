@@ -1,0 +1,395 @@
+{
+  "subject": "JavaScript y TypeScript",
+  "questions": [
+    {
+      "id": 1,
+      "unit": "Lenguaje",
+      "question": "¿Qué devuelve typeof null?",
+      "options": [
+        "\"number\"",
+        "\"null\"",
+        "\"object\"",
+        "\"undefined\""
+      ],
+      "correct": "\"object\"",
+      "explicacion": "Es un error histórico del lenguaje que se mantiene por compatibilidad."
+    },
+    {
+      "id": 2,
+      "unit": "Lenguaje",
+      "question": "¿Qué diferencia a const de let?",
+      "options": [
+        "const hace inmutable el objeto",
+        "const solo admite números",
+        "const tiene ámbito global",
+        "const no permite reasignar la variable"
+      ],
+      "correct": "const no permite reasignar la variable",
+      "explicacion": "El objeto al que apunta una const sí se puede modificar."
+    },
+    {
+      "id": 3,
+      "unit": "Lenguaje",
+      "question": "¿Qué devuelve [10, 9, 1].sort()?",
+      "options": [
+        "[1, 9, 10]",
+        "[1, 10, 9]",
+        "[9, 10, 1]",
+        "[10, 9, 1]"
+      ],
+      "correct": "[1, 10, 9]",
+      "explicacion": "Sin función de comparación, sort ordena como texto."
+    },
+    {
+      "id": 4,
+      "unit": "Lenguaje",
+      "question": "¿Qué valor toma a en const { a = 5 } = { a: null }?",
+      "options": [
+        "Lanza un error",
+        "undefined",
+        "null",
+        "5"
+      ],
+      "correct": "null",
+      "explicacion": "El valor por defecto solo se usa con undefined, no con null."
+    },
+    {
+      "id": 5,
+      "unit": "Lenguaje",
+      "question": "¿Qué devuelve 0 ?? 7?",
+      "options": [
+        "undefined",
+        "0",
+        "7",
+        "NaN"
+      ],
+      "correct": "0",
+      "explicacion": "El operador ?? solo salta con null o undefined."
+    },
+    {
+      "id": 6,
+      "unit": "Lenguaje",
+      "question": "¿Qué devuelve 0 || 7?",
+      "options": [
+        "false",
+        "true",
+        "7",
+        "0"
+      ],
+      "correct": "7",
+      "explicacion": "El operador || salta con cualquier valor falso, como el 0."
+    },
+    {
+      "id": 7,
+      "unit": "Lenguaje",
+      "question": "¿Cómo se comprueba que un valor es NaN?",
+      "options": [
+        "x === NaN",
+        "x == null",
+        "typeof x === \"NaN\"",
+        "Number.isNaN(x)"
+      ],
+      "correct": "Number.isNaN(x)",
+      "explicacion": "NaN no es igual a nada, ni a sí mismo."
+    },
+    {
+      "id": 8,
+      "unit": "Lenguaje",
+      "question": "¿Qué hace el operador ?. (encadenamiento opcional)?",
+      "options": [
+        "Crea la propiedad si falta",
+        "Devuelve undefined si lo anterior es null o undefined",
+        "Lanza un error si no existe",
+        "Convierte a booleano"
+      ],
+      "correct": "Devuelve undefined si lo anterior es null o undefined",
+      "explicacion": "Evita errores al leer propiedades de algo que puede no existir."
+    },
+    {
+      "id": 9,
+      "unit": "Lenguaje",
+      "question": "¿Qué estructura guarda valores sin repetir?",
+      "options": [
+        "Map",
+        "WeakRef",
+        "Set",
+        "Array"
+      ],
+      "correct": "Set",
+      "explicacion": "Un Set ignora los valores que ya contiene."
+    },
+    {
+      "id": 10,
+      "unit": "Lenguaje",
+      "question": "¿Qué diferencia tiene Map frente a un objeto?",
+      "options": [
+        "Es más corto de escribir",
+        "No se puede recorrer",
+        "Se guarda en disco",
+        "Admite claves de cualquier tipo"
+      ],
+      "correct": "Admite claves de cualquier tipo",
+      "explicacion": "Las claves de un objeto son siempre texto o símbolos."
+    },
+    {
+      "id": 11,
+      "unit": "Asincronía",
+      "question": "¿Qué devuelve siempre una función async?",
+      "options": [
+        "Un generador",
+        "Una promesa",
+        "El valor directamente",
+        "Un callback"
+      ],
+      "correct": "Una promesa",
+      "explicacion": "Aunque devuelvas un valor normal, se envuelve en una promesa."
+    },
+    {
+      "id": 12,
+      "unit": "Asincronía",
+      "question": "¿Qué se ejecuta antes tras el código síncrono?",
+      "options": [
+        "setInterval",
+        "setTimeout con 0",
+        "Los eventos de red",
+        "Las microtareas (promesas)"
+      ],
+      "correct": "Las microtareas (promesas)",
+      "explicacion": "La cola de microtareas se vacía antes de la siguiente tarea."
+    },
+    {
+      "id": 13,
+      "unit": "Asincronía",
+      "question": "¿Qué hace Promise.all si una promesa falla?",
+      "options": [
+        "Reintenta la que falla",
+        "Ignora la que falla",
+        "Se rechaza con ese error",
+        "Espera a todas y devuelve null"
+      ],
+      "correct": "Se rechaza con ese error",
+      "explicacion": "Para esperar a todas pase lo que pase está allSettled."
+    },
+    {
+      "id": 14,
+      "unit": "Asincronía",
+      "question": "¿Cuál espera a todas aunque alguna falle?",
+      "options": [
+        "Promise.race",
+        "Promise.all",
+        "Promise.allSettled",
+        "Promise.any"
+      ],
+      "correct": "Promise.allSettled",
+      "explicacion": "Devuelve el estado de cada una."
+    },
+    {
+      "id": 15,
+      "unit": "Asincronía",
+      "question": "¿Qué permite AbortController?",
+      "options": [
+        "Repetir una petición",
+        "Medir el tiempo",
+        "Ordenar promesas",
+        "Cancelar una petición en curso"
+      ],
+      "correct": "Cancelar una petición en curso",
+      "explicacion": "Su señal se pasa a fetch y a otras funciones asíncronas."
+    },
+    {
+      "id": 16,
+      "unit": "Asincronía",
+      "question": "¿Qué pasa con fetch si el servidor responde 404?",
+      "options": [
+        "La promesa se resuelve con ok a false",
+        "La promesa se rechaza",
+        "Se reintenta",
+        "Devuelve null"
+      ],
+      "correct": "La promesa se resuelve con ok a false",
+      "explicacion": "fetch solo se rechaza con fallos de red o cancelación."
+    },
+    {
+      "id": 17,
+      "unit": "Asincronía",
+      "question": "¿Para qué sirve for await...of?",
+      "options": [
+        "Recorrer un iterable asíncrono",
+        "Recorrer objetos",
+        "Ejecutar en paralelo",
+        "Pausar el hilo"
+      ],
+      "correct": "Recorrer un iterable asíncrono",
+      "explicacion": "Espera cada elemento antes de pasar al siguiente."
+    },
+    {
+      "id": 18,
+      "unit": "Asincronía",
+      "question": "¿Qué es un debounce?",
+      "options": [
+        "Cancelar la primera llamada",
+        "Esperar a que paren las llamadas para ejecutar una",
+        "Ejecutar a intervalos fijos",
+        "Guardar el resultado"
+      ],
+      "correct": "Esperar a que paren las llamadas para ejecutar una",
+      "explicacion": "Útil al buscar mientras se escribe."
+    },
+    {
+      "id": 19,
+      "unit": "Navegador",
+      "question": "¿Qué evita usar textContent en lugar de innerHTML?",
+      "options": [
+        "Los eventos duplicados",
+        "La inyección de código (XSS)",
+        "El uso de CSS",
+        "Los errores de red"
+      ],
+      "correct": "La inyección de código (XSS)",
+      "explicacion": "textContent trata el contenido como texto, no como HTML."
+    },
+    {
+      "id": 20,
+      "unit": "Navegador",
+      "question": "¿Qué hace event.preventDefault()?",
+      "options": [
+        "Recarga la página",
+        "Detiene la propagación",
+        "Borra el evento",
+        "Evita la acción por defecto del navegador"
+      ],
+      "correct": "Evita la acción por defecto del navegador",
+      "explicacion": "Para frenar la propagación está stopPropagation."
+    },
+    {
+      "id": 21,
+      "unit": "Navegador",
+      "question": "¿Qué es la delegación de eventos?",
+      "options": [
+        "Escuchar en un antecesor común",
+        "Pasar eventos a un worker",
+        "Copiar un evento",
+        "Guardar eventos"
+      ],
+      "correct": "Escuchar en un antecesor común",
+      "explicacion": "Aprovecha que los eventos suben por el árbol."
+    },
+    {
+      "id": 22,
+      "unit": "Navegador",
+      "question": "¿Dónde no llega JavaScript si la cookie es HttpOnly?",
+      "options": [
+        "A hacer peticiones",
+        "A leer esa cookie",
+        "Al DOM",
+        "A localStorage"
+      ],
+      "correct": "A leer esa cookie",
+      "explicacion": "Reduce el daño si alguien inyecta código."
+    },
+    {
+      "id": 23,
+      "unit": "Navegador",
+      "question": "¿Qué permite un service worker?",
+      "options": [
+        "Leer archivos del disco",
+        "Acceder al DOM",
+        "Compilar código",
+        "Responder peticiones sin conexión"
+      ],
+      "correct": "Responder peticiones sin conexión",
+      "explicacion": "Actúa entre la página y la red."
+    },
+    {
+      "id": 24,
+      "unit": "Navegador",
+      "question": "¿Qué mide el LCP?",
+      "options": [
+        "Los saltos de diseño",
+        "Cuándo se pinta el contenido más grande",
+        "El tiempo de respuesta al clic",
+        "El tamaño de la página"
+      ],
+      "correct": "Cuándo se pinta el contenido más grande",
+      "explicacion": "Es una de las métricas web principales."
+    },
+    {
+      "id": 25,
+      "unit": "TypeScript",
+      "question": "¿Qué tipo obliga a comprobar antes de usar el valor?",
+      "options": [
+        "never",
+        "unknown",
+        "any",
+        "void"
+      ],
+      "correct": "unknown",
+      "explicacion": "any desactiva las comprobaciones; unknown las exige."
+    },
+    {
+      "id": 26,
+      "unit": "TypeScript",
+      "question": "¿Qué hace Partial<T>?",
+      "options": [
+        "Quita las nulas",
+        "Elige algunas propiedades",
+        "Las hace de solo lectura",
+        "Vuelve opcionales todas las propiedades"
+      ],
+      "correct": "Vuelve opcionales todas las propiedades",
+      "explicacion": "Para elegir algunas está Pick."
+    },
+    {
+      "id": 27,
+      "unit": "TypeScript",
+      "question": "¿Qué representa never?",
+      "options": [
+        "Un valor que no puede existir",
+        "Un valor nulo",
+        "Un texto vacío",
+        "Cualquier valor"
+      ],
+      "correct": "Un valor que no puede existir",
+      "explicacion": "Sirve para comprobar que un switch cubre todos los casos."
+    },
+    {
+      "id": 28,
+      "unit": "TypeScript",
+      "question": "¿Qué consigue as const en un array?",
+      "options": [
+        "Una tupla de solo lectura con tipos literales",
+        "Un array más rápido",
+        "Una copia profunda",
+        "Un enum"
+      ],
+      "correct": "Una tupla de solo lectura con tipos literales",
+      "explicacion": "Los valores dejan de ensancharse a string o number."
+    },
+    {
+      "id": 29,
+      "unit": "TypeScript",
+      "question": "¿Qué es una unión discriminada?",
+      "options": [
+        "Un tipo genérico",
+        "Una clase abstracta",
+        "Dos interfaces iguales",
+        "Tipos con una propiedad común que los distingue"
+      ],
+      "correct": "Tipos con una propiedad común que los distingue",
+      "explicacion": "Permite que el compilador sepa qué variante tienes."
+    },
+    {
+      "id": 30,
+      "unit": "TypeScript",
+      "question": "¿Qué queda de los tipos al ejecutar?",
+      "options": [
+        "Clases",
+        "Nada, se borran al compilar",
+        "Comprobaciones",
+        "Metadatos"
+      ],
+      "correct": "Nada, se borran al compilar",
+      "explicacion": "Por eso los datos externos hay que validarlos en ejecución."
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "subject": "Web, redes y seguridad",
+  "questions": [
+    {
+      "id": 1,
+      "unit": "HTTP",
+      "question": "¿Qué código indica que se ha creado un recurso?",
+      "options": [
+        "201",
+        "204",
+        "200",
+        "302"
+      ],
+      "correct": "201",
+      "explicacion": "204 indica éxito sin contenido."
+    },
+    {
+      "id": 2,
+      "unit": "HTTP",
+      "question": "¿Qué método debe ser idempotente?",
+      "options": [
+        "PATCH siempre",
+        "PUT",
+        "POST",
+        "CONNECT"
+      ],
+      "correct": "PUT",
+      "explicacion": "Repetirlo deja el mismo resultado."
+    },
+    {
+      "id": 3,
+      "unit": "HTTP",
+      "question": "¿Qué indica un 401?",
+      "options": [
+        "No existe",
+        "Error del servidor",
+        "Falta autenticarse",
+        "No hay permiso"
+      ],
+      "correct": "Falta autenticarse",
+      "explicacion": "Sin permiso, ya identificado, es 403."
+    },
+    {
+      "id": 4,
+      "unit": "HTTP",
+      "question": "¿Qué indica un 429?",
+      "options": [
+        "Servidor caído",
+        "Demasiadas peticiones",
+        "Recurso borrado",
+        "Conflicto"
+      ],
+      "correct": "Demasiadas peticiones",
+      "explicacion": "Suele acompañarse de Retry-After."
+    },
+    {
+      "id": 5,
+      "unit": "HTTP",
+      "question": "¿Para qué sirve ETag?",
+      "options": [
+        "Comprimir",
+        "Cifrar",
+        "Autenticar",
+        "Saber si el recurso ha cambiado"
+      ],
+      "correct": "Saber si el recurso ha cambiado",
+      "explicacion": "Permite responder 304 sin repetir el contenido."
+    },
+    {
+      "id": 6,
+      "unit": "HTTP",
+      "question": "¿Qué cabecera controla la caché?",
+      "options": [
+        "Origin",
+        "Cache-Control",
+        "Host",
+        "Accept"
+      ],
+      "correct": "Cache-Control",
+      "explicacion": "Indica quién puede guardar y cuánto tiempo."
+    },
+    {
+      "id": 7,
+      "unit": "HTTP",
+      "question": "¿Qué mejora HTTP/2?",
+      "options": [
+        "Cifra el contenido dos veces",
+        "Varias peticiones por la misma conexión",
+        "Quita TCP",
+        "Elimina las cabeceras"
+      ],
+      "correct": "Varias peticiones por la misma conexión",
+      "explicacion": "HTTP/3 además cambia TCP por QUIC."
+    },
+    {
+      "id": 8,
+      "unit": "HTTP",
+      "question": "¿Qué es CORS?",
+      "options": [
+        "Permiso para que otro origen lea la respuesta",
+        "Un cifrado",
+        "Un tipo de cookie",
+        "Una base de datos"
+      ],
+      "correct": "Permiso para que otro origen lea la respuesta",
+      "explicacion": "Lo aplica el navegador, no el servidor."
+    },
+    {
+      "id": 9,
+      "unit": "Redes",
+      "question": "¿Qué traduce el DNS?",
+      "options": [
+        "Puertos a procesos",
+        "Nombres a direcciones IP",
+        "HTML a texto",
+        "IP a MAC"
+      ],
+      "correct": "Nombres a direcciones IP",
+      "explicacion": "De IP a MAC se encarga ARP."
+    },
+    {
+      "id": 10,
+      "unit": "Redes",
+      "question": "¿Qué garantiza TCP frente a UDP?",
+      "options": [
+        "Más velocidad",
+        "Entrega ordenada y sin pérdidas",
+        "Envío a varios destinos",
+        "Menos cabecera"
+      ],
+      "correct": "Entrega ordenada y sin pérdidas",
+      "explicacion": "UDP prioriza la rapidez."
+    },
+    {
+      "id": 11,
+      "unit": "Redes",
+      "question": "¿Qué puerto usa HTTPS por defecto?",
+      "options": [
+        "22",
+        "8080",
+        "443",
+        "80"
+      ],
+      "correct": "443",
+      "explicacion": "El 80 es HTTP y el 22 es SSH."
+    },
+    {
+      "id": 12,
+      "unit": "Redes",
+      "question": "¿Qué rango es una red privada?",
+      "options": [
+        "1.1.1.0/24",
+        "200.0.0.0/8",
+        "192.168.0.0/16",
+        "8.8.8.0/24"
+      ],
+      "correct": "192.168.0.0/16",
+      "explicacion": "También 10.0.0.0/8 y 172.16.0.0/12."
+    },
+    {
+      "id": 13,
+      "unit": "Redes",
+      "question": "¿Cuántos hosts útiles tiene una /24?",
+      "options": [
+        "256",
+        "254",
+        "128",
+        "255"
+      ],
+      "correct": "254",
+      "explicacion": "Se restan la dirección de red y la de difusión."
+    },
+    {
+      "id": 14,
+      "unit": "Redes",
+      "question": "¿Qué hace un proxy inverso?",
+      "options": [
+        "Asigna IP",
+        "Cifra el disco",
+        "Oculta al cliente",
+        "Recibe peticiones y las reparte a servidores"
+      ],
+      "correct": "Recibe peticiones y las reparte a servidores",
+      "explicacion": "Nginx es un ejemplo."
+    },
+    {
+      "id": 15,
+      "unit": "Redes",
+      "question": "¿Qué es NAT?",
+      "options": [
+        "Un protocolo de correo",
+        "Un cortafuegos",
+        "Compartir una IP pública entre varios equipos",
+        "Un cable"
+      ],
+      "correct": "Compartir una IP pública entre varios equipos",
+      "explicacion": "Traduce direcciones privadas a públicas."
+    },
+    {
+      "id": 16,
+      "unit": "Redes",
+      "question": "¿Qué indica el TTL de un registro DNS?",
+      "options": [
+        "Cuánto se puede guardar en caché",
+        "La prioridad",
+        "El tamaño",
+        "El puerto"
+      ],
+      "correct": "Cuánto se puede guardar en caché",
+      "explicacion": "Conviene bajarlo antes de una migración."
+    },
+    {
+      "id": 17,
+      "unit": "Seguridad",
+      "question": "¿Cómo se guardan las contraseñas?",
+      "options": [
+        "Cifradas con una clave",
+        "Con MD5",
+        "Con un hash lento y sal",
+        "En Base64"
+      ],
+      "correct": "Con un hash lento y sal",
+      "explicacion": "Argon2 y bcrypt están pensados para eso."
+    },
+    {
+      "id": 18,
+      "unit": "Seguridad",
+      "question": "¿Qué evita una consulta preparada?",
+      "options": [
+        "El CSRF",
+        "El XSS",
+        "La caché",
+        "La inyección SQL"
+      ],
+      "correct": "La inyección SQL",
+      "explicacion": "Los datos nunca se interpretan como código."
+    },
+    {
+      "id": 19,
+      "unit": "Seguridad",
+      "question": "¿Qué ataque frena SameSite en las cookies?",
+      "options": [
+        "Fuerza bruta",
+        "CSRF",
+        "DDoS",
+        "Inyección SQL"
+      ],
+      "correct": "CSRF",
+      "explicacion": "La cookie no viaja desde otros sitios."
+    },
+    {
+      "id": 20,
+      "unit": "Seguridad",
+      "question": "¿Qué aporta una cabecera CSP?",
+      "options": [
+        "Comprime la página",
+        "Limita de dónde se carga código",
+        "Cifra las cookies",
+        "Evita el spam"
+      ],
+      "correct": "Limita de dónde se carga código",
+      "explicacion": "Reduce el efecto de un XSS."
+    },
+    {
+      "id": 21,
+      "unit": "Seguridad",
+      "question": "¿Qué contiene un JWT firmado, sin cifrar?",
+      "options": [
+        "Datos que cualquiera puede leer",
+        "Solo la firma",
+        "La contraseña",
+        "Nada legible"
+      ],
+      "correct": "Datos que cualquiera puede leer",
+      "explicacion": "La firma evita cambios, no lecturas."
+    },
+    {
+      "id": 22,
+      "unit": "Seguridad",
+      "question": "¿Qué es el principio de mínimo privilegio?",
+      "options": [
+        "Dar permisos a todos",
+        "Un solo administrador",
+        "No usar permisos",
+        "Dar solo los permisos necesarios"
+      ],
+      "correct": "Dar solo los permisos necesarios",
+      "explicacion": "Limita el daño de un fallo."
+    },
+    {
+      "id": 23,
+      "unit": "Seguridad",
+      "question": "¿Qué hace el intercambio Diffie-Hellman?",
+      "options": [
+        "Firmar mensajes",
+        "Acordar una clave por un canal abierto",
+        "Comprimir",
+        "Guardar contraseñas"
+      ],
+      "correct": "Acordar una clave por un canal abierto",
+      "explicacion": "Con claves nuevas cada vez se protege el pasado."
+    },
+    {
+      "id": 24,
+      "unit": "Seguridad",
+      "question": "¿Qué compara en tiempo constante?",
+      "options": [
+        "Dos archivos",
+        "Dos fechas",
+        "Dos secretos sin revelar dónde difieren",
+        "Dos usuarios"
+      ],
+      "correct": "Dos secretos sin revelar dónde difieren",
+      "explicacion": "Evita ataques midiendo el tiempo."
+    },
+    {
+      "id": 25,
+      "unit": "Operaciones",
+      "question": "¿Qué es la integración continua?",
+      "options": [
+        "Escribir documentación",
+        "Desplegar a mano",
+        "Probar cada cambio de forma automática",
+        "Copiar la base"
+      ],
+      "correct": "Probar cada cambio de forma automática",
+      "explicacion": "Detecta los fallos cuanto antes."
+    },
+    {
+      "id": 26,
+      "unit": "Operaciones",
+      "question": "¿Qué guarda una imagen de Docker?",
+      "options": [
+        "Los datos de usuarios",
+        "El programa y lo que necesita",
+        "El sistema completo",
+        "Las claves"
+      ],
+      "correct": "El programa y lo que necesita",
+      "explicacion": "Los datos van en volúmenes."
+    },
+    {
+      "id": 27,
+      "unit": "Operaciones",
+      "question": "¿Qué gana un build en varias etapas?",
+      "options": [
+        "Otra red",
+        "Más capas",
+        "Una imagen final más pequeña",
+        "Más memoria"
+      ],
+      "correct": "Una imagen final más pequeña",
+      "explicacion": "Las herramientas de compilar no llegan al final."
+    },
+    {
+      "id": 28,
+      "unit": "Operaciones",
+      "question": "¿Dónde van los secretos?",
+      "options": [
+        "En el README",
+        "En el repositorio",
+        "En la imagen",
+        "En variables o un gestor de secretos"
+      ],
+      "correct": "En variables o un gestor de secretos",
+      "explicacion": "Si llegan al historial, hay que cambiarlos."
+    },
+    {
+      "id": 29,
+      "unit": "Operaciones",
+      "question": "¿Qué es un despliegue azul-verde?",
+      "options": [
+        "Dos entornos y cambiar el tráfico",
+        "Dos idiomas",
+        "Dos ramas",
+        "Dos bases"
+      ],
+      "correct": "Dos entornos y cambiar el tráfico",
+      "explicacion": "Permite volver atrás al momento."
+    },
+    {
+      "id": 30,
+      "unit": "Operaciones",
+      "question": "¿Qué distingue a una prueba de integración?",
+      "options": [
+        "Prueba una función",
+        "Prueba la red",
+        "Prueba varias piezas juntas",
+        "Prueba el diseño"
+      ],
+      "correct": "Prueba varias piezas juntas",
+      "explicacion": "La unitaria aísla una sola pieza."
+    }
+  ]
+}
