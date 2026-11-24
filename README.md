@@ -1,5 +1,7 @@
 # Repaso Espaciado
 
+**Español** · [English](README.en.md)
+
 [![CI](https://github.com/Serberar/repaso-espaciado/actions/workflows/ci.yml/badge.svg)](https://github.com/Serberar/repaso-espaciado/actions/workflows/ci.yml)
 
 **Demo:** https://serberar.github.io/repaso-espaciado/ (sin cuenta: el progreso se queda en tu navegador)
