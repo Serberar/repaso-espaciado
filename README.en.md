@@ -2,7 +2,7 @@
 
 Installable web app (PWA) to prepare multiple-choice exams with spaced repetition.
 
-**Demo:** https://serberar.github.io/repaso-espaciado/ (no account: progress stays in your browser)
+**Demo:** (no account: progress stays in your browser)
 
 <p>
   <img src="docs/practicar.png" width="260" alt="Daily plan">
