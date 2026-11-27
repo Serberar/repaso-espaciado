@@ -2,9 +2,7 @@
 
 **Español** · [English](README.en.md)
 
-[![CI](https://github.com/Serberar/repaso-espaciado/actions/workflows/ci.yml/badge.svg)](https://github.com/Serberar/repaso-espaciado/actions/workflows/ci.yml)
-
-**Demo:** https://serberar.github.io/repaso-espaciado/ (sin cuenta: el progreso se queda en tu navegador)
+**Demo:** (sin cuenta: el progreso se queda en tu navegador)
 
 Aplicación web instalable (PWA) para **preparar exámenes tipo test con repetición espaciada**. Lee las preguntas de archivos JSON, guarda el progreso en el navegador o en Supabase y enseña cómo vas en cada asignatura.
 
